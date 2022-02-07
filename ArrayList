@@ -1,0 +1,53 @@
+import java.util.ArrayList;
+
+class arry_list
+{
+
+	public static void main(String[] args)
+	{
+		ArrayList<Integer> c= new ArrayList<>();
+		
+		// add element to ArrayList
+		c.add(10);
+		c.add(20);
+		c.add(30);
+		c.add(40);
+		System.out.println("element of arraylist is = "+c);
+		
+		// get a element at arraylist
+		
+		int x=c.get(2);
+		System.out.println(x);
+		
+		// add element at specific positin
+		
+		c.add(2,5);
+		System.out.println(c);
+		
+		// overiding element in arraylist
+		
+		c.set(1,100);
+		System.out.println(c);
+		
+		//remove element
+		
+		c.remove(2);
+		System.out.println(c);
+		
+		//size of arraylist
+		
+		System.out.println(c.size());
+		
+		//Iteror of arraylist
+		
+		for(int i=0;i<c.size();i++)
+		{
+			System.out.println(c.get(i));
+		}
+		
+		
+
+	
+	}
+	
+}
