@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+#define ll long long
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+    while (n--)
+    {
+        int a, ans = 0;
+        cin >> a;
+        string s[a];
+        for (int i = 0; i < a; i++)
+        {
+            cin >> s[i];
+        }
+        for (int j = 0; j < 10; j++)
+        {
+            int cou = 0;
+            for (int i = 0; i < a; i++)
+            {
+                if (s[i][j] == '1')
+                {
+                    cou++;
+                }
+            }
+            if (cou % 2 != 0)
+            {
+                ans++;
+            }
+        }
+        cout << ans << endl;
+    }
+    return 0;
+}
