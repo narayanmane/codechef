@@ -1,0 +1,33 @@
+#include <iostream>
+#include<set>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    set<int> ans;
+	    int n;
+	    cin>>n;
+	    int arr[n];
+	    
+	    // take array input 
+	    for(int i=0;i<n;i++)
+	    {
+	        cin>>arr[i];
+	    }
+	    // To  check the value is eqaul or not if value is not equal then we are added in the set then finally we are return the set size 
+	    for(int j=1;j<n;j++)
+	    {
+	        if(arr[j]!=arr[j-1])
+	        {
+	            ans.insert(j);
+	            ans.insert(j-1);
+	        }
+	    }
+	    cout<<ans.size()<<endl;
+	}
+	return 0;
+}
